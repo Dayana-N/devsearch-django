@@ -1,13 +1,26 @@
 {% extends 'main.html' %}
 {% block content %}
-<p>Hello you are on the {{page}} page</p>
-
-{% if number > 10 %}
-<p>The number is greater than 10</p>
-{% else %}
-<p>The number is less than 10</p>
-{% endif%}
 
 <h1>Projects template</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus perferendis similique neque quae expedita obcaecati quibusdam, impedit laborum deleniti nihil perspiciatis aliquam, voluptatum odio praesentium consectetur inventore! Facilis rerum nisi at consectetur itaque omnis officiis quos, praesentium assumenda ipsa labore ducimus, culpa, quam dolores dolor natus incidunt sequi corporis magnam.</p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Project</th>
+        <th>Positive Votes</th>
+        <th>Votes</th>
+        <th></th>
+    </tr>
+    {% for project in projects %}
+    <tr>
+        <td>{{ project.id }}</td>
+        <td>{{ project.title }}</td>
+        <td>{{ project.vote_ratio }}%</td>
+        <td>{{ project.vote_total }}</td>
+        <td>{{ project.created }}</td>
+        <td><a href="/project/{{project.id}}">View</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
 {% endblock content %}
