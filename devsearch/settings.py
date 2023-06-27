@@ -29,7 +29,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 
-CSRF_TRUSTED_ORIGINS = [os.environ.get("CSRF_TRUSTED_ORIGINS")]
+CSRF_TRUSTED_ORIGINS = [os.environ.get(
+    "CSRF_TRUSTED_ORIGINS"),]
 ALLOWED_HOSTS = [os.environ.get("LOCAL_HOST")]
 
 
