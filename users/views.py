@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile
 from django.views.decorators.csrf import requires_csrf_token
@@ -8,6 +9,10 @@ from django.views.decorators.csrf import requires_csrf_token
 
 
 def loginUser(request):
+
+    if request.user.is_authenticated:
+        return redirect('profiles')
+
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']

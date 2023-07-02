@@ -30,8 +30,9 @@ DEBUG = True
 
 
 CSRF_TRUSTED_ORIGINS = [os.environ.get(
-    "CSRF_TRUSTED_ORIGINS"),]
-ALLOWED_HOSTS = [os.environ.get("LOCAL_HOST")]
+    "CSRF_TRUSTED_ORIGINS")]
+ALLOWED_HOSTS = [os.environ.get(
+    "LOCAL_HOST")]
 
 
 # Application definition
