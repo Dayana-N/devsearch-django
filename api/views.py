@@ -9,8 +9,8 @@ from projects.models import Project, Review
 def getRoutes(request):
     routes = [
         {'GET': '/api/projects'},
-        {'GET': '/api/projects/id'},
-        {'POST': '/api/projects/id/vote'},
+        {'GET': '/api/project/id'},
+        {'POST': '/api/project/id/vote'},
 
         {'POST': '/api/users/token'},
         {'POST': '/api/users/token/refresh'},
