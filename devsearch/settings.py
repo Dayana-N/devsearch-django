@@ -179,7 +179,7 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/images/'
 
-# set the dir for static files
+# Set the dir for static files
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
