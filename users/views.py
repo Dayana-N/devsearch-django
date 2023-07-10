@@ -215,7 +215,7 @@ def createMessage(request, pk):
             message.save()
 
             messages.success(request, 'Your message was successfully sent!')
-            return redirect('profile', pk=recipient.id)
+            return redirect('user-profile', pk=recipient.id)
     context = {
         'recipient': recipient, 'form': form
     }
